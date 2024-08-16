@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size: inherit;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul {
+    list-style-type: none;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-height: 100%;
+}
+main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 1087px; /* 1057 + 15 * 2 */
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/* button */
+.button {
+    font-family: var(--fontRaleway);
+    font-weight: 800;
+    font-size: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 30px;
+    line-height: 40px;
+    max-height: 40px;
+    letter-spacing: 1.35px;
+    color: #FCFDFE;
+}
+.button:hover {
+    transform: scale(1.015);
+    box-shadow: 0 0 1px #4285F4;
+}
+.button:active {
+    transform: scale(1);
+    box-shadow: none;
+}
+.bg_blue {
+    background-color: var(--main_color_blue);
+}
+.bg_red {
+    background-color: var(--main_color_red);
+}
+/* /button */
+/* color mods */
+.color_blue {
+    color: var(--main_color_blue)
+}
+.color_red {
+    color: var(--main_color_red)
+}
+/* /color mods */
+h2 {
+    font-family: var(--fontRubik);
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 126%;
+}
+p {
+    font-family: var(--fontRubik);
+    line-height: 138.5%;
+    letter-spacing: 8%;
+    font-size: 12px;
+    color: var(--color_grey);
+    padding: 20px 0;
+}
+
+/* adaptive sheet */
+@media(max-width: 1087px) { /* PC */
+    [class*="__container"] {
+        max-width: 970px
+    }
+}
+@media(max-width: 991.98px) { /* TABLET */
+    [class*="__container"] {
+        max-width: 750px
+    }
+    main {
+        padding-top: 80px;
+    }
+}
+@media(max-width: 767.98px) { /* MOBILE */
+    [class*="__container"] {
+        max-width: none
+    }
+}
+@media(max-width: 479.98px) { /* MOBILE SMALL */
+    [class*="__container"] {
+        max-width: none
+    }
+}
+/* adaptive sheet */
